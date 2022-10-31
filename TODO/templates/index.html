@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  {% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TO-DO</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'style2.css' %}">
+  </head>
+  <body>
+    <div class="div1">
+    <ul>
+      <img src={% static "logo.jpg" %} height='50px' width='100px'>
+      <h2 class="head">To-DO</h2>
+      
+      <li><img src={% static "work.jpg" %} height='20px' width='20px'></a> Work</a></li>
+      <li><a href="#"><img src={% static "personal.jpg" %} height='20px' width='20px'></a> Personal</a></li>
+      <li><a href="#"><img src={% static "social.jpg" %} height='20px' width='20px'></a> Social</a></li>
+      <li><a href="#"><img src={% static "create.jpg" %} height='20px' width='20px'></a> Create List +</a></li><br><br>
+      <li class="filter">Filters</li>
+      <li><a href="#"><img src={% static "active.jpg" %} height='20px' width='20px'></a> Active Task</a></li>
+      <li><a href="#"><img src={% static "assign.jpg" %} height='20px' width='20px'></a> Assigned to me</a></li>
+      <li><a href="#"><img src={% static "upcoming.jpg" %} height='20px' width='20px'></a> Upcoming</a></li>
+      <li><a href="#"><img src={% static "overdue.jpg" %} height='20px' width='20px'></a> Overdue</a></li>
+      <li><a href="#"><img src={% static "complete.jpg" %} height='20px' width='20px'></a> Completed</a></li> <br>
+  
+      <a href="add"><button class="button">Add Task +</button></a>
+  </ul>
+
+</div>
+
+<div class="div2">
+  <div class="wrap">
+    <div class="search">
+       <input type="text" class="searchTerm" placeholder="Find your task " aria-label="Search through site content">
+       <button type="submit" class="searchButton">
+        <i class="fa fa-search"></i>
+      </button>
+    </div>
+</div><br><br><br>
+<h1 class="h1">Work</h1>
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Deadline</th>
+        <th>Description</th>   
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    {% for task in tasks %}
+    <tr>
+        <td>{{task.taskname}}</td>
+        <td>{{task.deadline}}</td>
+        <td>{{task.description}}</td>
+        
+        <td><a href="/update/{{task.id}}"><img src={% static "edit.jpg" %} height='20px' width='20px'></a></td>
+        <td><a href="/delete/{{task.id}}"><img src={% static "delete.jpg" %} height='20px' width='20px'></a></td>
+    </tr>
+    {% endfor %}
+</table><br>
+ 
+</div>
+    <script src="" async defer></script>
+  </body>
+</html>

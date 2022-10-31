@@ -1,0 +1,127 @@
+.div1{
+    width: 20%;
+    float: left;
+}
+
+
+.div2{
+  width: 80%;
+  margin: 0 auto;
+  
+}
+ul{
+  list-style-type: none;
+}
+
+
+body{
+  background: #e8feff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 40%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head{
+  font-size: 35px;
+  color: rgb(149, 246, 5);
+  font-weight: 900;
+}
+
+.head2{
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 5px;
+  padding-left: 40%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgb(49, 26, 26);
+}
+
+.body2{
+  background-image:url('imm.jpg') ;
+}
+
+.h1{
+  font-size: 50px;
+  color: rgb(47, 245, 13);
+  font-weight: 900;
+
+}
+#form{
+  font-size: larger;
+  font-weight: 600;
+}
+
+ul li{
+  padding: 9px;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+}
+
+
+.button{
+  border: none;
+  padding: 12px 25px;
+  background-color: rgb(61, 154, 61);
+  font-weight: 500;
+}
+
+.filter{
+  color: greenyellow;
+  font-weight: 900;
+  font-size: larger;
+}
+
+table, td, th{
+  border: 2px solid rgb(151, 224, 124);
+  
+  text-align: center;
+  font-size:larger;
+  background-color: rgb(202, 235, 235);
+  border-radius: 10px;
+}
+
+table{
+  border-collapse: collapse;
+  width: 80%;
+}

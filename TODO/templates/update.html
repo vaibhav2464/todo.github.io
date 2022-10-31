@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style2.css' %}">
+    </head>
+    <body class="body2">
+      
+        <h1 class="head2"> Enter the new task</h1>
+       
+        {% for task in tasks %}
+        <form id="form" method="post" action="edit/{{task.id}}" >
+            {% csrf_token %}
+            <div class="msg"></div>        
+            <div>
+                <label >Task Name</label><br>
+                <input type="text" id="taskname" name="taskname" value="{{task.taskname}}"rows="2" cols="100"><br><br>
+            </div>
+            <div>
+                <label>Task Deadline</label><br>
+                <input type="date" min="2022-10-31" id="deadline" name="deadline" value="{{task.deadline}}"><br><br>
+            </div>
+            <div>
+                <label>Task Description</label><br>
+                <input type="text" id="description" name="description" value="{{task.description}}"rows="15" cols="100"><br><br>
+            </div>                       
+                
+            <button type="submit" class="button" >  Update </button><br><br>
+                    
+        </form>
+        {% endfor %}
+
+
+        <a href="/"><button class="button">HOME</button></a>
+   
+        <script src="" async defer></script>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    {% load static %}
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'style2.css' %}">
+    </head>
+    <body class="body2">
+      
+        <h1 class="head2"> Enter the new task</h1>
+       
+        <form id="form" method="post" action="register" >
+            {% csrf_token %}
+            <div class="msg"></div>        
+            <div>
+                <label >Task Name</label><br>
+                <textarea type="text" id="taskname" name="taskname" value="" rows="1" cols="50"></textarea><br><br>
+            </div>
+            <div>
+                <label>Task Deadline</label><br>
+                <input type="date" min="2022-10-31" id="deadline" name="deadline" value="" required><br><br>
+            </div>
+            <div>
+                <label>Task Description</label><br>
+                <textarea type="text" id="description" name="description" value="" rows="5" cols="50"></textarea><br><br>
+            </div>
+                       
+        
+            <button type="submit" class="button" >  Submit </button><br><br>
+            
+            
+        
+        
+            
+        </form>
+        <a href="/"><button class="button">HOME</button></a>
+   
+        <script src="" async defer></script>
+    </body>
+</html>
